@@ -1,0 +1,72 @@
+/*
+** FOOTER
+*/
+footer {
+	width: 100%;
+	height: 188px;
+	background: url('../images/global/pattern-footer.png') repeat-x;
+	position: relative;
+	padding-top: 60px;
+
+	.footer-top {
+		width: 100%;
+		position: relative;
+
+		.nav-footer {
+			text-align: center;
+
+			.btn {
+				display: inline-block;
+				height: 52px;
+				text-indent: -999999px;
+
+				&.btn-1 {
+					background: url('../images/global/btn-1.png') no-repeat;
+					width: 208px;
+				}
+				&.btn-2 {
+					background: url('../images/global/btn-2.png') no-repeat;
+					width: 177px;
+				}
+				&.btn-3 {
+					background: url('../images/global/btn-3.png') no-repeat;
+					width: 134px;
+				}
+				&.btn-4 {
+					background: url('../images/global/btn-4.png') no-repeat;
+					width: 177px;
+				}
+			}
+		}
+		.btn-quit-game {
+			width: 156px;
+			height: 137px;
+			background: url('../images/global/quit-game.png') no-repeat;
+			text-indent: -999999px;
+			@include ab( n, n, 6px, 180px );
+		}
+	}
+	.footer-bottom {
+		width: 100%;
+		position: relative;
+
+		img {
+			&.potato-tree-left {
+				@include ab( -170px, 50px, n, n );
+			}
+			&.potato-tree-right {
+				@include ab( -170px, n, n, 40px );
+			}
+			&.all-potato-footer {
+				@include ab( -13px, n, n, 200px );
+			}
+		}
+		.btn-hot-line {
+			width: 125px;
+			height: 28px;
+			text-indent: -999999px;
+			background: url('../images/global/phone.png') no-repeat;
+			@include ab( 30px, 370px, n, n );
+		}
+	}
+}

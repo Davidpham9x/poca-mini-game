@@ -1,0 +1,32 @@
+.page-home {
+	.main-content {
+		.wrap-intro {
+			background: url('../images/global/bg-home.png') no-repeat;
+			width: 705px;
+			height: 599px;
+			margin: -50px auto 0;
+			position: relative;
+
+			.intro {
+				color: #012e6a;
+				margin: 0;
+				font-size: 14px;
+				max-width: 420px;
+				margin-left: -210px;
+				line-height: normal;
+				@include ab( n, 50%, 108px, n );
+			}
+			.btn-play-now {
+				width: 145px;
+				height: 47px;
+				margin-left: -75px;
+				background: url('../images/global/btn-play-now.png') no-repeat;
+				font-size: 14px;
+				color: #ff0000;
+				text-align: center;
+				line-height: 42px;
+				@include ab( n, 50%, 30px, n );
+			}
+		}
+	}
+}
