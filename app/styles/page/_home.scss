@@ -14,6 +14,7 @@
 				max-width: 420px;
 				margin-left: -210px;
 				line-height: normal;
+				font-family: $font-uvnB;
 				@include ab( n, 50%, 108px, n );
 			}
 			.btn-play-now {
@@ -25,6 +26,7 @@
 				color: #ff0000;
 				text-align: center;
 				line-height: 42px;
+				font-family: $font-uvnB;
 				@include ab( n, 50%, 30px, n );
 			}
 		}

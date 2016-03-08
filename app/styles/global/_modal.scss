@@ -1,0 +1,238 @@
+.modal {
+	position: relative;
+	margin: 120px auto 0;
+	&.bet-potato-modal {
+		background: url('../images/global/bg-bet-potato.png') no-repeat;
+		width: 384px;
+		height: 279px;
+
+		.heading {
+			background: url('../images/global/heading-bet-potato.png') no-repeat;
+			width: 188px;
+			height: 43px;
+			line-height: 43px;
+			top: -20px;
+		}
+		.intro {
+			padding: 25px 50px;
+		}
+	}
+	&.ranking-modal, &.tnc-modal, &.history-modal {
+		background: url('../images/global/bg-other.png') no-repeat;
+		width: 691px;
+		height: 501px;
+
+		.heading {
+			background: url('../images/global/heading.png') no-repeat;
+			width: 229px;
+			height: 52px;
+			line-height: 52px;
+			top: -35px;
+			font-size: 18px;
+			text-transform: uppercase;
+		}
+		.intro {
+			padding: 25px 50px;
+		}
+		.ranking-content {
+			padding: 0 30px;
+			&.type-header {
+				p {
+					line-height: normal;
+					font-size: 14px;
+					font-family: $font-uvnB;
+					color: #fff;
+					text-transform: uppercase;
+					border-left: 1px solid #fff;
+					&:first-child {
+						border-left: 0;
+					}
+				}
+			}
+			&.type-list {
+				height: 425px;
+
+				.list-ranking {
+					list-style: none;
+					padding: 0;
+
+					li {
+						background: url('../images/global/bg-ranking.png') no-repeat;
+						width: 602px;
+						height: 54px;
+						margin: 5px auto 0;
+						overflow: hidden;
+						display: block;
+						&:first-child {
+							margin: 0 auto;
+						}
+
+						p {
+							line-height: 54px;
+							font-size: 12px;
+							color: #0a3c73;
+							font-family: $font-uvnB;
+							text-transform: uppercase;
+							position: relative;
+							&.username {
+								width: 40%;
+								text-align: left;
+								padding-left: 60px;
+							}
+
+							.icon-star {
+								background: url('../images/global/icon-star.png') no-repeat;
+								width: 47px;
+								height: 46px;
+								text-align: center;
+								line-height: 46px;
+								color: #fe3c33;
+								font-size: 20px;
+								@include ab( 6px, 3px, n, n );
+							}
+						}
+					}
+				}
+			}
+
+			p {
+				margin: 0;
+				display: block;
+				float: left;
+				padding: 0 10px;
+				text-align: center;
+				&.username {
+					width: 40%;
+				}
+				&.phone-number {
+					width: 35%;
+				}
+				&.total-potato {
+					width: 25%;
+				}
+			}
+		}
+		.tnc-content {
+			background: url('../images/global/bg-content-tnc.png') no-repeat;
+			width: 578px;
+			height: 400px;
+			margin: 0 auto;
+			padding: 25px;
+			font-size: 14px;
+			color: #0a3c73;
+			font-family: $font-uvnR;
+			line-height: normal;
+
+			.color {
+				color: #f20c24;
+			}
+			ul {
+				list-style: none;
+				overflow: hidden;
+				padding: 0;
+				margin: 0;
+
+				li {
+					display: block;
+					margin-top: 5px;
+					&:first-child {
+						margin-top: 0;
+					}
+					&:before {
+						content: '';
+						background: url('../images/global/icon-list-tnc.png') no-repeat;
+						display: inline-block;
+						width: 13px;
+						height: 14px;
+						margin-right: 5px;
+					}
+				}
+			}
+		}
+		.history-content {
+			&.type-header {
+				p {
+					line-height: normal;
+					font-size: 14px;
+					font-family: $font-uvnB;
+					color: #fff;
+					text-transform: uppercase;
+					border-left: 1px solid #fff;
+					&:first-child {
+						border-left: 0;
+					}
+				}
+			}
+			&.type-list {
+				background: url('../images/global/bg-list-history.png') no-repeat;
+				width: 551px;
+				height: 303px;
+				margin: 20px auto 0;
+			}
+			&.type-statistical {
+				background: url('../images/global/bg-statistical.png') no-repeat;
+				width: 451px;
+				height: 96px;
+				margin: 6px auto 0;
+			}
+
+			p {
+				margin: 0;
+				display: block;
+				float: left;
+				padding: 0 10px;
+				text-align: center;
+				&.date {
+					width: 25%;
+				}
+				&.team-name {
+					width: 30%;
+				}
+				&.total-potato {
+					width: 25%;
+				}
+				&.result {
+					width: 20%
+				}
+			}
+		}
+	}
+	&.tnc-modal, &.history-modal {
+		.heading {
+			font-size: 14px;
+		}
+	}
+	.btn-close {
+		background: url('../images/global/icon-close.png') no-repeat;
+		width: 48px;
+		height: 49px;
+		text-indent: -99999px;
+		@include ab( 0, n, n, -50px );
+	}
+	.inner {
+
+	}
+	.heading {
+		text-align: center;
+		font-family: $font-uvnB;
+		color: #fff;
+		text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.43);
+		margin: 0 auto;
+		position: relative;
+	}
+	.intro {
+		color: #012e6a;
+		margin: 0;
+		font-size: 18px;
+		line-height: normal;
+		text-align: center;
+		font-family: $font-uvnR;
+	}
+}
+
+.mfp-bg {
+	display: none;
+}
+.mfp-close-btn-in .mfp-close {
+	display: none;
+}

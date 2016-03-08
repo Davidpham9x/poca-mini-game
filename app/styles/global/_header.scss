@@ -6,6 +6,7 @@ header {
 	height: 54px;
 	background: url('../images/global/pattern-header.jpg') repeat-x;
 	position: relative;
+	z-index: 5;
 
 	.logo {
 		text-indent: -9999px;

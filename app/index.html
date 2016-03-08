@@ -13,6 +13,7 @@
     <!-- bower:css -->
     <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
     <link rel="stylesheet" href="/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="/bower_components/magnific-popup/dist/magnific-popup.css" />
     <!-- endbower -->
     <!-- endbuild -->
 
@@ -42,7 +43,7 @@
                 <nav class="nav-footer">
                     <a class="btn btn-1" href="" title="Cách chơi &amp; giải thưởng">Cách chơi &amp; giải thưởng</a>
                     <a class="btn btn-2" href="" title="Lịch sử cược khoai">Lịch sử cược khoai</a>
-                    <a class="btn btn-3" href="" title="Nạp khoai">Nạp khoai</a>
+                    <a class="btn btn-3" href="javascript:void(0)" title="Nạp khoai" onclick="pocaMiniGame.Global.initShowModalBetPotato();">Nạp khoai</a>
                     <a class="btn btn-4" href="" title="Bảng xếp hạng">Bảng xếp hạng</a>
                 </nav>
                 <a href="" title="Thoát khỏi game" class="btn btn-quit-game">Thoát khỏi game</a>
@@ -56,12 +57,183 @@
         </footer>
     </div>
 
+    <!-- Modal Bet Potato -->
+    <div id="bet-potato-modal" class="mfp-hide modal bet-potato-modal">
+        <a href="javascript:void(0)" title="Đóng" class="btn-close">Đóng</a>
+        <div class="inner">
+            <h2 class="heading">NẠP KHOAI</h2>
+            <p class="intro">Các bạn có thể nạp thêm khoai bằng cách tìm <strong>Thẻ Khuyến Mại</strong> xuất hiện ngẫu nhiên trong các gói Poca Khoai Tây. Với mỗi <strong>Mã Code</strong> trên Thẻ Khuyến Mại tìm được và nhập ở trang chủ phía ngoài, bạn sẽ được <strong>tặng</strong> thêm <strong>100 khoai</strong>.</p>
+        </div>
+    </div>
+
+    <!-- Modal Ranking -->
+    <div id="ranking-modal" class="mfp-hide modal ranking-modal">
+        <a href="javascript:void(0)" title="Đóng" class="btn-close">Đóng</a>
+        <div class="inner">
+            <h2 class="heading">bảng xếp hạng</h2>
+            <div class="ranking-content type-header clearfix">
+                <p class="username">Tên đăng nhập</p>
+                <p class="phone-number">Số ĐTDĐ</p>
+                <p class="total-potato">Số khoai</p>
+            </div>
+            <div class="ranking-content type-list mCustomScrollbar">
+                <ul class="list-ranking">
+                    <li>
+                        <p class="username">
+                            <span class="icon-star">1</span>
+                            xxxxxque.vu@gmail.com
+                        </p>
+                        <p class="phone-number">xxxxxxx227</p>
+                        <p class="total-potato">5000</p>
+                    </li>
+                    <li>
+                        <p class="username">
+                            <span class="icon-star">2</span>
+                            xxxxxque.vu@gmail.com
+                        </p>
+                        <p class="phone-number">xxxxxxx227</p>
+                        <p class="total-potato">5000</p>
+                    </li>
+                    <li>
+                        <p class="username">
+                            <span class="icon-star">3</span>
+                            xxxxxque.vu@gmail.com
+                        </p>
+                        <p class="phone-number">xxxxxxx227</p>
+                        <p class="total-potato">5000</p>
+                    </li>
+                    <li>
+                        <p class="username">
+                            <span class="icon-star">4</span>
+                            xxxxxque.vu@gmail.com
+                        </p>
+                        <p class="phone-number">xxxxxxx227</p>
+                        <p class="total-potato">5000</p>
+                    </li>
+                    <li>
+                        <p class="username">
+                            <span class="icon-star">5</span>
+                            xxxxxque.vu@gmail.com
+                        </p>
+                        <p class="phone-number">xxxxxxx227</p>
+                        <p class="total-potato">5000</p>
+                    </li>
+                    <li>
+                        <p class="username">
+                            <span class="icon-star">6</span>
+                            xxxxxque.vu@gmail.com
+                        </p>
+                        <p class="phone-number">xxxxxxx227</p>
+                        <p class="total-potato">5000</p>
+                    </li>
+                    <li>
+                        <p class="username">
+                            <span class="icon-star">7</span>
+                            xxxxxque.vu@gmail.com
+                        </p>
+                        <p class="phone-number">xxxxxxx227</p>
+                        <p class="total-potato">5000</p>
+                    </li>
+                    <li>
+                        <p class="username">
+                            <span class="icon-star">8</span>
+                            xxxxxque.vu@gmail.com
+                        </p>
+                        <p class="phone-number">xxxxxxx227</p>
+                        <p class="total-potato">5000</p>
+                    </li>
+                    <li>
+                        <p class="username">
+                            <span class="icon-star">9</span>
+                            xxxxxque.vu@gmail.com
+                        </p>
+                        <p class="phone-number">xxxxxxx227</p>
+                        <p class="total-potato">5000</p>
+                    </li>
+                    <li>
+                        <p class="username">
+                            <span class="icon-star">10</span>
+                            xxxxxque.vu@gmail.com
+                        </p>
+                        <p class="phone-number">xxxxxxx227</p>
+                        <p class="total-potato">5000</p>
+                    </li>
+                    <li>
+                        <p class="username">
+                            <span class="icon-star">11</span>
+                            xxxxxque.vu@gmail.com
+                        </p>
+                        <p class="phone-number">xxxxxxx227</p>
+                        <p class="total-potato">5000</p>
+                    </li>
+                    <li>
+                        <p class="username">
+                            <span class="icon-star">12</span>
+                            xxxxxque.vu@gmail.com
+                        </p>
+                        <p class="phone-number">xxxxxxx227</p>
+                        <p class="total-potato">5000</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal TnC -->
+    <div id="tnc-modal" class="mfp-hide modal tnc-modal">
+        <a href="javascript:void(0)" title="Đóng" class="btn-close">Đóng</a>
+        <div class="inner">
+            <h2 class="heading">cách chơi &amp; giải thưởng</h2>
+            <div class="tnc-content">
+                Khi tạo tài khoản mới, bạn được tặng ngay <strong class="color">500 khoai</strong> trong tài khoản<br /><br />
+                Trước mỗi trận đấu, bạn dự đoán một đội thắng cuộc và cược một số khoai tùy chọn. Nếu trận đấu có lượt đi và lượt về, bạn dự đoán đội thắng chung cuộc sau cả hai lượt. Số khoai cược ít nhất là <strong class="color">50 khoai</strong>.<br /><br />
+                <ul>
+                    <li>
+                        Nếu dự đoán <span class="color">đúng</span>, bạn được <span class="color">cộng</span> thêm số khoai đã cược.
+                    </li>
+                    <li>
+                        Nếu <span class="color">sai</span>, bạn bị <span class="color">trừ</span> số khoai đã cược.<br />
+                    </li>
+                </ul><br />
+                Top người chơi có số lượng khoai cao nhất sau mỗi vòng sẽ nhận được giải <strong>Poca Fan: 2 tháng ăn Poca Khoai Tây mỗi ngày</strong> (tương đương 60 gói Poca Khoai Tây 5.000đ)<br /><br />
+                <ul>
+                    <li>
+                        <span class="color">Vòng 1 (14/04/2016)</span>: top 42 người chơi sau 4 trận tứ kết.
+                    </li>
+                    <li>
+                        <span class="color">Vòng 2 (28/05/2016)</span>: top 42 người chơi sau 2 trận bán kết và trận chung kết.
+                    </li>
+                </ul><br />
+                <strong>Bạn nên tham gia cược tất cả các trận</strong>, nếu không tham gia, bạn tự động bị trừ 50 khoai cho mỗi trận.<br /><br />
+                <strong>Bạn nên tham gia từ đầu chương trình</strong>, nếu tham gia trễ, lượng khoai ban đầu sẽ bị trừ 50 khoai cho mỗi trận không tham gia.<br /><br />
+                * Ví dụ: nếu bạn bỏ lỡ 02 trận mới bắt đầu tham gia, lượng khoai ban đầu sẽ bị trừ 100 khoai, còn 400 khoai.
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal history -->
+    <div id="history-modal" class="mfp-hide modal history-modal">
+        <a href="javascript:void(0)" title="Đóng" class="btn-close">Đóng</a>
+        <div class="inner">
+            <h2 class="heading">lịch sử CƯỢC KHOAI</h2>
+            <div class="history-content type-header clearfix">
+                <p class="date">NGÀY</p>
+                <p class="team-name">ĐỘI CƯỢC</p>
+                <p class="total-potato">Số khoai</p>
+                <p class="result">KẾT QUẢ</p>
+            </div>
+            <div class="history-content type-list"></div>
+            <div class="history-content type-statistical"></div>
+        </div>
+    </div>
+
     <!-- build:js scripts/vendor.js -->
     <!-- bower:js -->
     <script src="/bower_components/jquery/dist/jquery.js"></script>
     <script src="/bower_components/jquery-placeholder/jquery.placeholder.js"></script>
     <script src="/bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
     <script src="/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

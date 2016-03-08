@@ -27,6 +27,14 @@ var isMobile = {
         init: function() { //initialization code goes here
             $.support.cors = true;
             this.initFormElements();
+
+            $.magnificPopup.open({
+                'items': {
+                    src: '#history-modal',
+                    type: 'inline'
+                },
+                'closeBtnInside': true
+            });
         },
 
         initFormElements: function() {
@@ -79,8 +87,63 @@ var isMobile = {
             $(document).on('change', '.select-wrapper select', function() {
                 $(this).prev('span').replaceWith('<span>' + $(this).find('option:selected').text() + '</span>');
             });
-        }
+        },
 
+        initShowModalBetPotato: function () {
+            $.magnificPopup.open({
+                'items': {
+                    src: '#bet-potato-modal',
+                    type: 'inline'
+                },
+                'closeBtnInside': true
+            });
+
+            $('#bet-potato-modal').find('.btn-close').off('click').on('click', function () {
+                $.magnificPopup.close();
+            });
+        },
+
+        initShowModalRanking: function () {
+            $.magnificPopup.open({
+                'items': {
+                    src: '#ranking-modal',
+                    type: 'inline'
+                },
+                'closeBtnInside': true
+            });
+
+            $('#ranking-modal').find('.btn-close').off('click').on('click', function () {
+                $.magnificPopup.close();
+            });
+        },
+
+        initShowModalTnC: function () {
+            $.magnificPopup.open({
+                'items': {
+                    src: '#tnc-modal',
+                    type: 'inline'
+                },
+                'closeBtnInside': true
+            });
+
+            $('#tnc-modal').find('.btn-close').off('click').on('click', function () {
+                $.magnificPopup.close();
+            });
+        },
+
+        initShowModalHistory: function () {
+            $.magnificPopup.open({
+                'items': {
+                    src: '#history-modal',
+                    type: 'inline'
+                },
+                'closeBtnInside': true
+            });
+
+            $('#history-modal').find('.btn-close').off('click').on('click', function () {
+                $.magnificPopup.close();
+            });
+        }
     };
 })(jQuery);
 
