@@ -1,0 +1,133 @@
+.page-schedule {
+	.main-content {
+		.heading {
+			text-align: center;
+			font-size: 19px;
+			font-family: $font-uvnB;
+			color: #ff0000;
+			text-align: center;
+			text-transform: uppercase;
+			margin: 35px 0 15px;
+		}
+		.list-teams {
+			list-style: none;
+			padding: 0;
+			max-width: 850px;
+			margin: 20px auto 0;
+			&:first-child {
+				margin: 0 auto;
+			}
+			&.type-quarterfinals {
+				li {
+					width: 12.5%;
+					padding: 0 1px;
+				}
+			}
+			&.type-semifinal {
+				li {
+					width: 25%;
+					padding: 0 52px;
+				}
+			}
+			&.type-final {
+				li {
+					width: 50%;
+					padding: 0 52px;
+				}
+			}
+			&.type-winner {
+				li {
+					width: 100%;
+				}
+			}
+			&.type-disable {
+				li {
+					.outer {
+						.inner {
+							color: #ff0000;
+							font-size: 32px;
+							font-family: $font-uvnB;
+						}
+					}
+				}
+			}
+
+			li {
+				float: left;
+				text-align: center;
+
+				.outer {
+					background: url('../images/global/bg-team.png') no-repeat;
+					width: 106px;
+					height: 86px;
+					display: table;
+					margin: 0 auto;
+					.inner {
+						display: table-cell;
+						vertical-align: middle;
+						text-align: center;
+						height: 100%;
+						color: #0a3c73;
+						font-size: 12px;
+						padding: 0 10px;
+						font-family: $font-uvnR;
+					}
+				}
+			}
+		}
+		.list-action {
+			list-style: none;
+			padding: 0;
+			max-width: 840px;
+			margin: 0 auto;
+			&.type-quarterfinals {
+				li {
+					width: 25%;
+				}
+			}
+			&.type-semifinal {
+				li {
+					width: 50%;
+				}
+			}
+			&.type-final {
+				li {
+					width: 100%;
+				}
+			}
+			&.type-disable {
+				li {
+					a {
+						background: url('../images/global/btn-bet-disable.png') no-repeat;
+						color: #012e6a;
+					}
+				}
+			}
+
+			li {
+				float: left;
+				text-align: center;
+
+				a {
+					background: url('../images/global/btn-bet-active.png') no-repeat;
+					width: 98px;
+					height: 34px;
+					margin: 0 auto;
+					font-family: $font-uvnB;
+					font-size: 12px;
+					text-transform: uppercase;
+					color: #ff0000;
+					text-align: center;
+					line-height: 30px;
+					display: block;
+				}
+				p {
+					color: #0a3c73;
+					font-size: 11px;
+					margin: 5px 0 0;
+					line-height: normal;
+				}
+			}
+		}
+	}
+}

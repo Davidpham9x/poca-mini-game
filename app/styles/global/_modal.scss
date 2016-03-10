@@ -1,7 +1,7 @@
 .modal {
 	position: relative;
 	margin: 120px auto 0;
-	&.bet-potato-modal {
+	&.bet-intro-modal {
 		background: url('../images/global/bg-bet-potato.png') no-repeat;
 		width: 384px;
 		height: 279px;
@@ -17,7 +17,7 @@
 			padding: 25px 50px;
 		}
 	}
-	&.ranking-modal, &.tnc-modal, &.history-modal {
+	&.ranking-modal, &.tnc-modal, &.history-modal, &.bet-potato-modal {
 		background: url('../images/global/bg-other.png') no-repeat;
 		width: 691px;
 		height: 501px;
@@ -151,6 +151,8 @@
 		}
 		.history-content {
 			&.type-header {
+				padding: 0 50px;
+
 				p {
 					line-height: normal;
 					font-size: 14px;
@@ -158,6 +160,7 @@
 					color: #fff;
 					text-transform: uppercase;
 					border-left: 1px solid #fff;
+					text-align: center;
 					&:first-child {
 						border-left: 0;
 					}
@@ -168,12 +171,69 @@
 				width: 551px;
 				height: 303px;
 				margin: 20px auto 0;
+				padding-right: 50px;
+				height: 300px;
+				.list-history {
+					overflow: hidden;
+					list-style: none;
+					padding: 0;
+					margin: 0;
+
+					li {
+						p {
+							font-family: $font-uvnR;
+							font-size: 14px;
+							color: #104176;
+							line-height: 45px;
+							border-right: 1px solid #818181;
+							border-bottom: 1px solid #818181;
+						}
+					}
+				}
 			}
 			&.type-statistical {
 				background: url('../images/global/bg-statistical.png') no-repeat;
 				width: 451px;
 				height: 96px;
 				margin: 6px auto 0;
+				padding: 20px;
+
+				.content-left {
+					font-family: $font-uvnR;
+					font-size: 14px;
+					color: #104176;
+					float: left;
+					width: 50%;
+					text-align: center;
+					line-height: normal;
+
+					strong {
+						color: #ff0000;
+						font-size: 29px;
+					}
+				}
+				.content-right {
+					font-family: $font-uvnR;
+					font-size: 14px;
+					color: #104176;
+					float: left;
+					width: 50%;
+					text-align: center;
+					line-height: normal;
+
+					.btn {
+						background: url('../images/global/btn-confirm.png') no-repeat;
+						width: 125px;
+						height: 47px;
+						line-height: 47px;
+						text-align: center;
+						margin: 5px auto 0;
+						text-transform: uppercase;
+						color: #ff0000;
+						font-size: 14px;
+						font-family: $font-uvnB;
+					}
+				}
 			}
 
 			p {
@@ -193,6 +253,125 @@
 				}
 				&.result {
 					width: 20%
+				}
+			}
+		}
+		.bet-potato-content {
+			.step {
+				margin: 15px auto 0;
+				padding: 15px 0;
+				&.step-1 {
+					background: url('../images/global/bg-content-bet-potato-top.png') no-repeat;
+					width: 551px;
+					height: 210px;
+					margin: 0 auto;
+
+					.list-teams {
+						list-style: none;
+						padding: 0;
+						text-align: center;
+						li {
+							display: inline-flex;
+							padding: 0 20px;
+							position: relative;
+							&:first-child {
+								&:before {
+									display: none;
+								}
+							}
+							&:before {
+								content: 'VS';
+								font-family: $font-uvnB;
+								font-weight: bold;
+								color: #0a3c73;
+								font-size: 20px;
+								@include ab( 45%, -11px, n, n );
+							}
+							>.inner {
+								width: 125px;
+								height: 125px;
+								background-color: #fff;
+								position: relative;
+								cursor: pointer;
+								display: table;
+								@include border-radius( 5px, 5px, 5px, 5px );
+								@include box-shadow(  0px, 2px, 4px, rgba(194, 128, 23, 0.5) );
+								// @include box-shadow(  0px, -1px, 3px, rgba(180, 97, 0, 1), true );
+								&:hover {
+									.overlay {
+										display: table;
+									}
+								}
+
+								label {
+									font-size: 14px;
+									color: #0a3c73;
+									display: table-cell;
+									vertical-align: middle;
+									height: 100%;
+									text-align: center;
+								}
+								.overlay {
+									background: url('../images/global/bg-transparent-1.png') repeat;
+									width: 100%;
+									height: 125px;
+									@include ab( 0, 0, n, n );
+									display: none;
+
+									.inner {
+										font-size: 18px;
+										color: #ff0000;
+										text-transform: uppercase;
+										display: table-cell;
+										vertical-align: middle;
+										height: 100%;
+										.icon-check {
+											background: url('../images/global/icon-choose-team.png') no-repeat;
+											width: 37px;
+											height: 36px;
+											display: inline-block;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+				&.step-2 {
+					background: url('../images/global/bg-content-bet-potato-bottom.png') no-repeat;
+					width: 551px;
+					height: 177px;
+
+					.input-text {
+						background: url('../images/global/bg-input.png') no-repeat;
+						width: 132px;
+						height: 51px;
+						margin: 0 auto;
+					}
+					.btn-confirm {
+						background: url('../images/global/btn-confirm.png') no-repeat;
+						width: 125px;
+						height: 47px;
+						margin: 15px auto 0;
+						text-transform: uppercase;
+						font-size: 14px;
+						color: #ff0000;
+						line-height: 44px;
+						text-align: center;
+						font-family: $font-uvnB;
+					}
+				}
+
+				.title {
+					color: #0a3c73;
+					font-size: 14px;
+					padding-left: 100px;
+					strong {
+						font-size: 24px;
+						color: #ff0000;
+						font-family: $font-uvnB;
+						padding-right: 5px;
+					}
 				}
 			}
 		}

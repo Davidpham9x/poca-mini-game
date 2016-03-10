@@ -28,13 +28,13 @@ var isMobile = {
             $.support.cors = true;
             this.initFormElements();
 
-            $.magnificPopup.open({
+            /*$.magnificPopup.open({
                 'items': {
-                    src: '#history-modal',
+                    src: '#bet-potato-modal',
                     type: 'inline'
                 },
                 'closeBtnInside': true
-            });
+            });*/
         },
 
         initFormElements: function() {
@@ -86,6 +86,20 @@ var isMobile = {
 
             $(document).on('change', '.select-wrapper select', function() {
                 $(this).prev('span').replaceWith('<span>' + $(this).find('option:selected').text() + '</span>');
+            });
+        },
+
+        initShowModalBetIntro: function () {
+            $.magnificPopup.open({
+                'items': {
+                    src: '#bet-intro-modal',
+                    type: 'inline'
+                },
+                'closeBtnInside': true
+            });
+
+            $('#bet-intro-modal').find('.btn-close').off('click').on('click', function () {
+                $.magnificPopup.close();
             });
         },
 
