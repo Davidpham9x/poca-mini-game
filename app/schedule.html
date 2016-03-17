@@ -32,7 +32,9 @@
         </header>
 
         <div class="main-content">
-            <h2 class="heading">vòng tứ kết</h2>
+            <h2 class="heading type-quarterfinals">vòng tứ kết</h2>
+            <h2 class="heading type-semifinal">vòng <br/>bán kết</h2>
+            <h2 class="heading type-final">trận chung kết</h2>
             <ul class="clearfix list-teams type-quarterfinls">
                 <li>
                     <div class="outer">
@@ -94,6 +96,7 @@
             <ul class="clearfix list-action type-quarterfinals">
                 <li>
                     <a href="" title="đặt cược">đặt cược</a>
+                    <span class="highlight"></span>
                     <p class="time">
                         20:45 - 05/04/2016<br/>
                         21:00 - 10/04/2016<br/>
@@ -101,6 +104,7 @@
                 </li>
                 <li>
                     <a href="" title="đặt cược">đặt cược</a>
+                    <span class="highlight"></span>
                     <p class="time">
                         20:45 - 05/04/2016<br/>
                         21:00 - 10/04/2016<br/>
@@ -108,6 +112,7 @@
                 </li>
                 <li>
                     <a href="" title="đặt cược">đặt cược</a>
+                    <span class="highlight"></span>
                     <p class="time">
                         20:45 - 05/04/2016<br/>
                         21:00 - 10/04/2016<br/>
@@ -115,67 +120,36 @@
                 </li>
                 <li>
                     <a href="" title="đặt cược">đặt cược</a>
+                    <span class="highlight"></span>
                     <p class="time">
                         20:45 - 05/04/2016<br/>
                         21:00 - 10/04/2016<br/>
                     </p>
                 </li>
             </ul>
-            <ul class="clearfix list-teams type-semifinal type-disable">
-                <li>
+            <ul class="clearfix list-teams type-semifinal">
+                <li class="type-disable">
                     <div class="outer">
                         <div class="inner">
                             ?
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="type-disable">
                     <div class="outer">
                         <div class="inner">
                             ?
                         </div>
                     </div>
                 </li>
-                <li>
+                <li class="type-disable">
                     <div class="outer">
                         <div class="inner">
                             ?
                         </div>
                     </div>
                 </li>
-                <li>
-                    <div class="outer">
-                        <div class="inner">
-                            ?
-                        </div>
-                    </div>
-                </li>
-            </ul>
-            <ul class="clearfix list-action type-semifinal type-disable">
-                <li>
-                    <a href="" title="đặt cược">đặt cược</a>
-                    <p class="time">
-                        20:45 - 05/04/2016<br/>
-                        21:00 - 10/04/2016<br/>
-                    </p>
-                </li>
-                <li>
-                    <a href="" title="đặt cược">đặt cược</a>
-                    <p class="time">
-                        20:45 - 05/04/2016<br/>
-                        21:00 - 10/04/2016<br/>
-                    </p>
-                </li>
-            </ul>
-            <ul class="clearfix list-teams type-final type-disable">
-                <li>
-                    <div class="outer">
-                        <div class="inner">
-                            ?
-                        </div>
-                    </div>
-                </li>
-                <li>
+                <li class="type-disable">
                     <div class="outer">
                         <div class="inner">
                             ?
@@ -183,16 +157,51 @@
                     </div>
                 </li>
             </ul>
-            <ul class="clearfix list-action type-final type-disable">
-                <li>
+            <ul class="clearfix list-action type-semifinal">
+                <li class="type-disable">
                     <a href="" title="đặt cược">đặt cược</a>
+                    <span class="highlight"></span>
+                    <p class="time">
+                        20:45 - 05/04/2016<br/>
+                        21:00 - 10/04/2016<br/>
+                    </p>
+                </li>
+                <li class="type-disable">
+                    <a href="" title="đặt cược">đặt cược</a>
+                    <span class="highlight"></span>
+                    <p class="time">
+                        20:45 - 05/04/2016<br/>
+                        21:00 - 10/04/2016<br/>
+                    </p>
+                </li>
+            </ul>
+            <ul class="clearfix list-teams type-final">
+                <li class="type-disable">
+                    <div class="outer">
+                        <div class="inner">
+                            ?
+                        </div>
+                    </div>
+                </li>
+                <li class="type-disable">
+                    <div class="outer">
+                        <div class="inner">
+                            ?
+                        </div>
+                    </div>
+                </li>
+            </ul>
+            <ul class="clearfix list-action type-final">
+                <li class="type-disable">
+                    <a href="" title="đặt cược">đặt cược</a>
+                    <span class="highlight"></span>
                     <p class="time">
                         20:45 - 05/04/2016<br/>
                     </p>
                 </li>
             </ul>
             <ul class="clearfix list-teams type-winner type-disable">
-                <li>
+                <li class="type-disable">
                     <div class="outer">
                         <div class="inner">
                             ?
@@ -219,62 +228,6 @@
                 <img src="images/global/potato-tree-right.png" alt="" class="potato-tree-right" />
             </div>
         </footer>
-    </div>
-
-    <!-- Modal Bet Potato -->
-    <div id="bet-potato-modal" class="mfp-hide modal bet-potato-modal">
-        <a href="javascript:void(0)" title="Đóng" class="btn-close">Đóng</a>
-        <div class="inner">
-            <h2 class="heading">đặt cược</h2>
-            <div class="bet-potato-content">
-                <div class="step step-1">
-                    <p class="title">
-                        <strong>Bước 1</strong>Hãy chọn đội thắng cuộc
-                        <ul class="list-teams">
-                            <li>
-                                <div class="inner">
-                                    <label for="chk-team-1">
-                                        FC SHAKHTAR DONETSK
-                                    </label>
-                                    <div class="checkbox-wrapper hidden">
-                                        <input type="checkbox" name="chk-choose-team" id="chk-team-1" class="input-checkbox" />
-                                    </div>
-                                    <div class="overlay">
-                                        <div class="inner">
-                                            <span class="icon-check"></span>Chọn
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li>
-                                <div class="inner">
-                                    <label for="chk-team-2">
-                                        REAL MADRID CF
-                                    </label>
-                                    <div class="checkbox-wrapper hidden">
-                                        <input type="checkbox" name="chk-choose-team" id="chk-team-2" class="input-checkbox" />
-                                    </div>
-                                    <div class="overlay">
-                                        <div class="inner">
-                                            <span class="icon-check"></span>Chọn
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </p>
-                </div>
-                <div class="step step-2">
-                    <p class="title">
-                        <strong>Bước 1</strong>Nhập số khoai đặt cược:
-                        <div class="input-text input-text-1">
-                            <input type="textbox" name="txt-num-potato" id="txt-num-potato" />
-                        </div>
-                        <a href="" title="xác nhận" class="btn btn-confirm" id="btn-confirm">xác nhận</a>
-                    </p>
-                </div>
-            </div>
-        </div>
     </div>
 
     <!-- build:js scripts/vendor.js -->

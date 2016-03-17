@@ -1,5 +1,7 @@
 .page-schedule {
 	.main-content {
+		padding: 50px 0;
+
 		.heading {
 			text-align: center;
 			font-size: 19px;
@@ -7,7 +9,20 @@
 			color: #ff0000;
 			text-align: center;
 			text-transform: uppercase;
-			margin: 35px 0 15px;
+			position: absolute;
+			left: 50%;
+			width: 200px;
+			margin-left: -100px;
+
+			&.type-quarterfinals {
+				top: 85px;
+			}
+			&.type-semifinal {
+				top: 320px;
+			}
+			&.type-final {
+				top: 490px;
+			}
 		}
 		.list-teams {
 			list-style: none;
@@ -40,7 +55,7 @@
 					width: 100%;
 				}
 			}
-			&.type-disable {
+			/* &.type-disable {
 				li {
 					.outer {
 						.inner {
@@ -50,11 +65,20 @@
 						}
 					}
 				}
-			}
+			} */
 
 			li {
 				float: left;
 				text-align: center;
+				&.type-disable {
+					.outer {
+						.inner {
+							color: #ff0000;
+							font-size: 32px;
+							font-family: $font-uvnB;
+						}
+					}
+				}
 
 				.outer {
 					background: url('../images/global/bg-team.png') no-repeat;
@@ -83,30 +107,68 @@
 			&.type-quarterfinals {
 				li {
 					width: 25%;
+
+					.highlight {
+						width: 118px;
+						margin-left: -59px;
+					}
 				}
 			}
 			&.type-semifinal {
 				li {
 					width: 50%;
+
+					a {
+						&:before {
+							left: -60px;
+						}
+						&:after {
+							right: -60px;
+						}
+					}
+					.highlight {
+						width: 218px;
+						margin-left: -109px;
+					}
 				}
 			}
 			&.type-final {
 				li {
 					width: 100%;
+
+					a {
+						&:before {
+							left: -165px;
+						}
+						&:after {
+							right: -165px;
+						}
+					}
+					.highlight {
+						width: 428px;
+						margin-left: -214px;
+					}
 				}
 			}
-			&.type-disable {
+			/* &.type-disable {
 				li {
 					a {
 						background: url('../images/global/btn-bet-disable.png') no-repeat;
 						color: #012e6a;
 					}
 				}
-			}
+			} */
 
 			li {
 				float: left;
 				text-align: center;
+				position: relative;
+				&.type-disable {
+					a {
+						background: url('../images/global/btn-bet-disable.png') no-repeat;
+						color: #012e6a;
+					}
+				}
 
 				a {
 					background: url('../images/global/btn-bet-active.png') no-repeat;
@@ -120,6 +182,36 @@
 					text-align: center;
 					line-height: 30px;
 					display: block;
+					position: relative;
+					z-index: 1;
+					&:before {
+						content: '';
+						width: 1px;
+						height: 20px;
+						background-color: #416892;
+						position: absolute;
+						left: -10px;
+						top: -5px;
+					}
+					&:after {
+						content: '';
+						width: 1px;
+						height: 20px;
+						background-color: #416892;
+						position: absolute;
+						right: -10px;
+						top: -5px;
+					}
+				}
+				.highlight {
+					background-color: #416892;
+					height: 1px;
+					position: absolute;
+					left: 50%;
+					top: 15px;
+					width: 25%;
+					display: block;
+					z-index: 0;
 				}
 				p {
 					color: #0a3c73;

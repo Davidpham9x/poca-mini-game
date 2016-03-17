@@ -1,6 +1,6 @@
 .modal {
 	position: relative;
-	margin: 120px auto 0;
+	margin: 50px auto;
 	&.bet-intro-modal {
 		background: url('../images/global/bg-bet-potato.png') no-repeat;
 		width: 384px;
@@ -12,9 +12,11 @@
 			height: 43px;
 			line-height: 43px;
 			top: -20px;
+			left: 50%;
+			margin-left: -94px;
 		}
 		.intro {
-			padding: 25px 50px;
+			padding: 20px 50px;
 		}
 	}
 	&.ranking-modal, &.tnc-modal, &.history-modal, &.bet-potato-modal {
@@ -30,12 +32,16 @@
 			top: -35px;
 			font-size: 18px;
 			text-transform: uppercase;
+			top: -35px;
+			left: 50%;
+			margin-left: -115px;
 		}
 		.intro {
 			padding: 25px 50px;
 		}
 		.ranking-content {
-			padding: 0 30px;
+			padding: 0 20px;
+			overflow: hidden;
 			&.type-header {
 				p {
 					line-height: normal;
@@ -150,8 +156,9 @@
 			}
 		}
 		.history-content {
+			overflow: hidden;
 			&.type-header {
-				padding: 0 50px;
+				padding: 0 120px 0 65px;
 
 				p {
 					line-height: normal;
@@ -190,13 +197,16 @@
 						}
 					}
 				}
+				.mCSB_scrollTools {
+					right: -30px;
+				}
 			}
 			&.type-statistical {
 				background: url('../images/global/bg-statistical.png') no-repeat;
 				width: 451px;
 				height: 96px;
 				margin: 6px auto 0;
-				padding: 20px;
+				padding: 15px 20px;
 
 				.content-left {
 					font-family: $font-uvnR;
@@ -271,7 +281,7 @@
 						padding: 0;
 						text-align: center;
 						li {
-							display: inline-flex;
+							display: inline-block;
 							padding: 0 20px;
 							position: relative;
 							&:first-child {
@@ -286,6 +296,13 @@
 								color: #0a3c73;
 								font-size: 20px;
 								@include ab( 45%, -11px, n, n );
+							}
+							&.active {
+								>.inner {
+									.overlay {
+										display: table;
+									}
+								}
 							}
 							>.inner {
 								width: 125px;
@@ -346,7 +363,7 @@
 						background: url('../images/global/bg-input.png') no-repeat;
 						width: 132px;
 						height: 51px;
-						margin: 0 auto;
+						margin: 10px auto 0;
 					}
 					.btn-confirm {
 						background: url('../images/global/btn-confirm.png') no-repeat;
@@ -366,6 +383,7 @@
 					color: #0a3c73;
 					font-size: 14px;
 					padding-left: 100px;
+					margin: 0;
 					strong {
 						font-size: 24px;
 						color: #ff0000;
@@ -377,9 +395,23 @@
 		}
 	}
 	&.tnc-modal, &.history-modal {
+		.inner {
+			padding: 50px 0;
+		}
 		.heading {
 			font-size: 14px;
 		}
+	}
+	&.history-modal {
+		.inner {
+			padding: 25px 0;
+		}
+		.heading {
+			font-size: 14px;
+		}
+	}
+	.inner {
+		padding: 25px 0;
 	}
 	.btn-close {
 		background: url('../images/global/icon-close.png') no-repeat;
@@ -388,16 +420,13 @@
 		text-indent: -99999px;
 		@include ab( 0, n, n, -50px );
 	}
-	.inner {
-
-	}
 	.heading {
 		text-align: center;
 		font-family: $font-uvnB;
 		color: #fff;
 		text-shadow: 0px 2px 3px rgba(0, 0, 0, 0.43);
 		margin: 0 auto;
-		position: relative;
+		position: absolute;
 	}
 	.intro {
 		color: #012e6a;
@@ -413,5 +442,26 @@
 	display: none;
 }
 .mfp-close-btn-in .mfp-close {
+	display: none;
+}
+.mCSB_scrollTools .mCSB_dragger .mCSB_dragger_bar {
+}
+.mCSB_scrollTools .mCSB_dragger {
+	background: none;
+	background: url('../images/global/icon-potato-scroll.png') no-repeat;
+	width: 43px!important;
+	height: 53px!important;
+	right: -10px;
+}
+.mCSB_inside > .mCSB_container {
+	margin-right: 0;
+}
+.mCustomScrollBox {
+	overflow: visible;
+}
+.mCSB_scrollTools .mCSB_draggerContainer {
+	right: -10px;
+}
+.mCSB_dragger_bar {
 	display: none;
 }

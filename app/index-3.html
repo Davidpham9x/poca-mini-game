@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>poca mini game</title>
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <!-- build:css styles/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="/bower_components/normalize-css/normalize.css" />
+    <link rel="stylesheet" href="/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css" />
+    <link rel="stylesheet" href="/bower_components/magnific-popup/dist/magnific-popup.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
+</head>
+
+<body>
+    <div id="main" class="page page-home">
+        <header>
+            <h1 class="logo">
+                <a href="" title="Cược khoai trúng quà"></a>
+                Cược khoai trúng quà
+            </h1>
+        </header>
+
+        <div class="main-content">
+            <div id="tnc-modal" class="modal tnc-modal">
+                <a href="javascript:void(0)" title="Đóng" class="btn-close">Đóng</a>
+                <div class="inner">
+                    <h2 class="heading">cách chơi &amp; giải thưởng</h2>
+                    <div class="tnc-content">
+                        Khi tạo tài khoản mới, bạn được tặng ngay <strong class="color">500 khoai</strong> trong tài khoản<br />
+                        Trước mỗi trận đấu, bạn dự đoán một đội thắng cuộc và cược một số khoai tùy chọn. Nếu trận đấu có lượt đi và lượt về, bạn dự đoán đội thắng chung cuộc sau cả hai lượt. Số khoai cược ít nhất là <strong class="color">50 khoai</strong>.<br />
+                        <ul>
+                            <li>
+                                Nếu dự đoán <span class="color">đúng</span>, bạn được <span class="color">cộng</span> thêm số khoai đã cược.
+                            </li>
+                            <li>
+                                Nếu <span class="color">sai</span>, bạn bị <span class="color">trừ</span> số khoai đã cược.<br />
+                            </li>
+                        </ul>
+                        Top người chơi có số lượng khoai cao nhất sau mỗi vòng sẽ nhận được giải <strong>Poca Fan: 2 tháng ăn Poca Khoai Tây mỗi ngày</strong> (tương đương 60 gói Poca Khoai Tây 5.000đ)<br />
+                        <ul>
+                            <li>
+                                <span class="color">Vòng 1 (14/04/2016)</span>: top 42 người chơi sau 4 trận tứ kết.
+                            </li>
+                            <li>
+                                <span class="color">Vòng 2 (28/05/2016)</span>: top 42 người chơi sau 2 trận bán kết và trận chung kết.
+                            </li>
+                        </ul>
+                        <strong>Bạn nên tham gia cược tất cả các trận</strong>, nếu không tham gia, bạn tự động bị trừ 50 khoai cho mỗi trận.<br />
+                        <strong>Bạn nên tham gia từ đầu chương trình</strong>, nếu tham gia trễ, lượng khoai ban đầu sẽ bị trừ 50 khoai cho mỗi trận không tham gia.<br />
+                        * Ví dụ: nếu bạn bỏ lỡ 02 trận mới bắt đầu tham gia, lượng khoai ban đầu sẽ bị trừ 100 khoai, còn 400 khoai.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <div class="footer-top clearfix">
+                <nav class="nav-footer">
+                    <a class="btn btn-1" href="" title="Cách chơi &amp; giải thưởng">Cách chơi &amp; giải thưởng</a>
+                    <a class="btn btn-2" href="" title="Lịch sử cược khoai">Lịch sử cược khoai</a>
+                    <a class="btn btn-3" href="javascript:void(0)" title="Nạp khoai" onclick="pocaMiniGame.Global.initShowModalBetPotato();">Nạp khoai</a>
+                    <a class="btn btn-4" href="" title="Bảng xếp hạng">Bảng xếp hạng</a>
+                </nav>
+                <a href="" title="Thoát khỏi game" class="btn btn-quit-game">Thoát khỏi game</a>
+            </div>
+            <div class="footer-bottom">
+                <img src="images/global/potato-tree-left.png" alt="" class="potato-tree-left" />
+                <a href="tel:1900 55 88 20" class="btn btn-hot-line" title="Hot line: 1900 55 88 20">1900 55 88 20</a>
+                <img src="images/global/all-potato-footer.png" alt="" class="all-potato-footer" />
+                <img src="images/global/potato-tree-right.png" alt="" class="potato-tree-right" />
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal history -->
+    <div id="history-modal" class="mfp-hide modal history-modal">
+        <a href="javascript:void(0)" title="Đóng" class="btn-close">Đóng</a>
+        <div class="inner">
+            <h2 class="heading">lịch sử CƯỢC KHOAI</h2>
+            <div class="history-content type-header clearfix">
+                <p class="date">NGÀY</p>
+                <p class="team-name">ĐỘI CƯỢC</p>
+                <p class="total-potato">Số khoai</p>
+                <p class="result">KẾT QUẢ</p>
+            </div>
+            <div class="history-content type-list mCustomScrollbar">
+                <ul class="list-history">
+                    <li>
+                        <p class="date">17/03/2016</p>
+                        <p class="team-name">MALMÖ FF</p>
+                        <p class="total-potato">+ 200</p>
+                        <p class="result">THẮNG</p>
+                    </li>
+                    <li>
+                        <p class="date">17/03/2016</p>
+                        <p class="team-name">MALMÖ FF</p>
+                        <p class="total-potato">+ 200</p>
+                        <p class="result">THẮNG</p>
+                    </li>
+                    <li>
+                        <p class="date">17/03/2016</p>
+                        <p class="team-name">MALMÖ FF</p>
+                        <p class="total-potato">+ 200</p>
+                        <p class="result">THẮNG</p>
+                    </li>
+                    <li>
+                        <p class="date">17/03/2016</p>
+                        <p class="team-name">MALMÖ FF</p>
+                        <p class="total-potato">+ 200</p>
+                        <p class="result">THẮNG</p>
+                    </li>
+                    <li>
+                        <p class="date">17/03/2016</p>
+                        <p class="team-name">MALMÖ FF</p>
+                        <p class="total-potato">+ 200</p>
+                        <p class="result">THẮNG</p>
+                    </li>
+                    <li>
+                        <p class="date">17/03/2016</p>
+                        <p class="team-name">MALMÖ FF</p>
+                        <p class="total-potato">+ 200</p>
+                        <p class="result">THẮNG</p>
+                    </li>
+                    <li>
+                        <p class="date">17/03/2016</p>
+                        <p class="team-name">MALMÖ FF</p>
+                        <p class="total-potato">+ 200</p>
+                        <p class="result">THẮNG</p>
+                    </li>
+                    <li>
+                        <p class="date">17/03/2016</p>
+                        <p class="team-name">MALMÖ FF</p>
+                        <p class="total-potato">+ 200</p>
+                        <p class="result">THẮNG</p>
+                    </li>
+                    <li>
+                        <p class="date">17/03/2016</p>
+                        <p class="team-name">MALMÖ FF</p>
+                        <p class="total-potato">+ 200</p>
+                        <p class="result">THẮNG</p>
+                    </li>
+                    <li>
+                        <p class="date">17/03/2016</p>
+                        <p class="team-name">MALMÖ FF</p>
+                        <p class="total-potato">+ 200</p>
+                        <p class="result">THẮNG</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="history-content type-statistical clearfix">
+                <div class="content-left">Số khoai đang có <br/><strong>2000</strong><br/>khoai</div>
+                <div class="content-right">Bạn có thể tiếp tục cược <a href="" title="" class="btn">đặt cược</a></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- build:js scripts/vendor.js -->
+    <!-- bower:js -->
+    <script src="/bower_components/jquery/dist/jquery.js"></script>
+    <script src="/bower_components/jquery-placeholder/jquery.placeholder.js"></script>
+    <script src="/bower_components/jquery-mousewheel/jquery.mousewheel.js"></script>
+    <script src="/bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"></script>
+    <script src="/bower_components/magnific-popup/dist/jquery.magnific-popup.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/main.js -->
+    <script src="scripts/main.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

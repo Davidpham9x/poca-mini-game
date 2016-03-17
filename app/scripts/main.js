@@ -27,6 +27,7 @@ var isMobile = {
         init: function() { //initialization code goes here
             $.support.cors = true;
             this.initFormElements();
+            // this.initShowModalHistory();
 
             /*$.magnificPopup.open({
                 'items': {
@@ -87,7 +88,7 @@ var isMobile = {
             $(document).on('change', '.select-wrapper select', function() {
                 $(this).prev('span').replaceWith('<span>' + $(this).find('option:selected').text() + '</span>');
             });
-        },
+        }/*,
 
         initShowModalBetIntro: function () {
             $.magnificPopup.open({
@@ -157,7 +158,7 @@ var isMobile = {
             $('#history-modal').find('.btn-close').off('click').on('click', function () {
                 $.magnificPopup.close();
             });
-        }
+        }*/
     };
 })(jQuery);
 
