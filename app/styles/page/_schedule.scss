@@ -13,12 +13,13 @@
 			left: 50%;
 			width: 200px;
 			margin-left: -100px;
+			line-height: normal;
 
 			&.type-quarterfinals {
 				top: 85px;
 			}
 			&.type-semifinal {
-				top: 320px;
+				top: 310px;
 			}
 			&.type-final {
 				top: 490px;
