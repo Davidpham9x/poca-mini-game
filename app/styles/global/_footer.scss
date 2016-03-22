@@ -11,6 +11,12 @@ footer {
 	.footer-top {
 		width: 100%;
 		position: relative;
+		@include respond-to( mobile ) {
+			display: none;
+		}
+		@include respond-to( ipadPortrait ) {
+			display: none;
+		}
 
 		.nav-footer {
 			text-align: center;
@@ -23,18 +29,30 @@ footer {
 				&.btn-1 {
 					background: url('../images/global/btn-1.png') no-repeat;
 					width: 208px;
+					&:hover, &.active {
+						background: url('../images/global/btn-1-active.png') no-repeat;
+					}
 				}
 				&.btn-2 {
 					background: url('../images/global/btn-2.png') no-repeat;
 					width: 177px;
+					&:hover, &.active {
+						background: url('../images/global/btn-2-active.png') no-repeat;
+					}
 				}
 				&.btn-3 {
 					background: url('../images/global/btn-3.png') no-repeat;
 					width: 134px;
+					&:hover, &.active {
+						background: url('../images/global/btn-3-active.png') no-repeat;
+					}
 				}
 				&.btn-4 {
 					background: url('../images/global/btn-4.png') no-repeat;
 					width: 177px;
+					&:hover, &.active {
+						background: url('../images/global/btn-4-active.png') no-repeat;
+					}
 				}
 			}
 		}
@@ -43,30 +61,104 @@ footer {
 			height: 137px;
 			background: url('../images/global/quit-game.png') no-repeat;
 			text-indent: -999999px;
-			@include ab( n, n, 6px, 180px );
+			@include ab( n, n, 6px, 5% );
+			z-index: 99;
+			@include screen( large ) {
+				right: 10%;
+			}
+			&:hover {
+				background: url('../images/global/quit-game-hover.png') no-repeat;
+			}
 		}
 	}
 	.footer-bottom {
 		width: 100%;
+		/* height: 100%; */
 		position: relative;
 
-		img {
+		span {
 			&.potato-tree-left {
-				@include ab( -170px, 50px, n, n );
+				background: url('../images/global/potato-tree-left-mobile.png') no-repeat;
+				width: 58px;
+				height: 112px;
+				@include ab( 0, 0, n, n );
+				@include screen( medium ) {
+					top: -55px;
+				}
+				@include respond-to( ipadPortrait ) {
+					top: 0;
+				}
+				@include screen( large ) {
+					background: url('../images/global/potato-tree-left.png') no-repeat;
+					width: 272px;
+					height: 246px;
+					top: -170px;
+					/* left: 50px; */
+				}
 			}
 			&.potato-tree-right {
-				@include ab( -170px, n, n, 40px );
+				background: url('../images/global/potato-tree-right-mobile.png') no-repeat;
+				width: 62px;
+				height: 128px;
+				@include ab( 0, n, n, 0 );
+				@include screen( medium ) {
+					top: -65px;
+				}
+				@include respond-to( ipadPortrait ) {
+					top: 0;
+				}
+				@include screen( large ) {
+					background: url('../images/global/potato-tree-right.png') no-repeat;
+					width: 128px;
+					height: 246px;
+					top: -170px;
+					/* right: 40px; */
+				}
 			}
 			&.all-potato-footer {
-				@include ab( -13px, n, n, 200px );
+				background: url('../images/global/all-potato-footer-mobile.png') center center no-repeat;
+				background-size: 100% 100%;
+				width: 100%;
+				height: 45px;
+				@include ab( 65px, n, n, 13% );
+				display: none;
+				@include screen( small ) {
+					max-width: 200px;
+					display: block;
+				}
+				@include screen( medium ) {
+					max-width: 346px;
+					display: block;
+					top: 0;
+				}
+				@include respond-to( ipadPortrait ) {
+					top: 65px;
+				}
+				@include screen( large ) {
+					background: url('../images/global/all-potato-footer.png') no-repeat;
+					height: 74px;
+					max-width: 538px;
+					display: block;
+					top: -10px;
+				}
 			}
 		}
 		.btn-hot-line {
+			background: url('../images/global/phone.png') no-repeat;
 			width: 125px;
 			height: 28px;
 			text-indent: -999999px;
-			background: url('../images/global/phone.png') no-repeat;
-			@include ab( 30px, 370px, n, n );
+			@include ab( 80px, 15%, n, n );
+			@include screen( medium ) {
+				top: 30px;
+			}
+			@include respond-to( ipadPortrait ) {
+				top: 80px;
+			}
+			@include screen( large ) {
+				left: 25%;
+				top: 30px;
+			}
 		}
 	}
 }

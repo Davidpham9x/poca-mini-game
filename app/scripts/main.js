@@ -27,15 +27,8 @@ var isMobile = {
         init: function() { //initialization code goes here
             $.support.cors = true;
             this.initFormElements();
-            // this.initShowModalHistory();
-
-            /*$.magnificPopup.open({
-                'items': {
-                    src: '#bet-potato-modal',
-                    type: 'inline'
-                },
-                'closeBtnInside': true
-            });*/
+            this.initToogleMenuMobile();
+            this.initHandlerWebsiteResize();
         },
 
         initFormElements: function() {
@@ -88,77 +81,41 @@ var isMobile = {
             $(document).on('change', '.select-wrapper select', function() {
                 $(this).prev('span').replaceWith('<span>' + $(this).find('option:selected').text() + '</span>');
             });
-        }/*,
-
-        initShowModalBetIntro: function () {
-            $.magnificPopup.open({
-                'items': {
-                    src: '#bet-intro-modal',
-                    type: 'inline'
-                },
-                'closeBtnInside': true
-            });
-
-            $('#bet-intro-modal').find('.btn-close').off('click').on('click', function () {
-                $.magnificPopup.close();
-            });
         },
 
-        initShowModalBetPotato: function () {
-            $.magnificPopup.open({
-                'items': {
-                    src: '#bet-potato-modal',
-                    type: 'inline'
-                },
-                'closeBtnInside': true
-            });
+        initToogleMenuMobile: function () {
+            var menuMobile = $('#toggle-menu-mobile'),
+                contentMenuMobile = $('.nav-header');
 
-            $('#bet-potato-modal').find('.btn-close').off('click').on('click', function () {
-                $.magnificPopup.close();
-            });
+                menuMobile.off('click').on('click', function (e) {
+                    e.preventDefault();
+                    if ( !$(this).hasClass('active') ) {
+                        contentMenuMobile.slideDown();
+                        $(this).addClass('active');
+                    } else {
+                        contentMenuMobile.slideUp();
+                        $(this).removeClass('active');
+                    }
+                });
         },
 
-        initShowModalRanking: function () {
-            $.magnificPopup.open({
-                'items': {
-                    src: '#ranking-modal',
-                    type: 'inline'
-                },
-                'closeBtnInside': true
-            });
+        initHandlerWebsiteResize: function () {
+            $( window ).resize(function() {
+                window.width = $(window).width();
+                /*console.log( window.width );*/
+                if ( window.width <= 480 ) {/*console.log(2);*/
+                    $(".ranking-content").mCustomScrollbar("destroy");
+                    $(".history-content.type-list").mCustomScrollbar("destroy");
+                } else {/*console.log(3);*/
+                    $(".ranking-content").mCustomScrollbar();
+                    $(".history-content.type-list").mCustomScrollbar();
+                }
 
-            $('#ranking-modal').find('.btn-close').off('click').on('click', function () {
-                $.magnificPopup.close();
-            });
-        },
-
-        initShowModalTnC: function () {
-            $.magnificPopup.open({
-                'items': {
-                    src: '#tnc-modal',
-                    type: 'inline'
-                },
-                'closeBtnInside': true
-            });
-
-            $('#tnc-modal').find('.btn-close').off('click').on('click', function () {
-                $.magnificPopup.close();
-            });
-        },
-
-        initShowModalHistory: function () {
-            $.magnificPopup.open({
-                'items': {
-                    src: '#history-modal',
-                    type: 'inline'
-                },
-                'closeBtnInside': true
-            });
-
-            $('#history-modal').find('.btn-close').off('click').on('click', function () {
-                $.magnificPopup.close();
-            });
-        }*/
+                /*if ( isMobile.any() ) {
+                } else {
+                }*/
+            }).trigger('resize');
+        }
     };
 })(jQuery);
 

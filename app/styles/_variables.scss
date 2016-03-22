@@ -133,19 +133,18 @@ $grid: 30px;
 
 // MEDIA QUERIES
 $breakpoints: (
- small: 600px,
- medium: 980px,
- large: 1366px
+	small: 480px,
+	medium: 768px,
+	large: 1280px
 );
 
 @mixin screen($breakpoint) {
-  @if map-has-key($breakpoints, $breakpoint) {
-    @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
-      @content;
+    @if map-has-key($breakpoints, $breakpoint) {
+        @media (min-width: #{map-get($breakpoints, $breakpoint)}) {
+            @content;
+        }
     }
-  }
-
-  @else {
-    @content;
-  }
+    @else {
+        @content;
+    }
 }

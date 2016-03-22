@@ -1,21 +1,45 @@
 .page-home {
 	.main-content {
 		.wrap-intro {
-			background: url('../images/global/bg-home.png') no-repeat;
-			width: 705px;
-			height: 599px;
-			margin: -50px auto 0;
+			background: url('../images/global/bg-home-mobile.png') center top no-repeat;
+			width: 100%;
+			background-size: 100%;
+			max-width: 480px;
+			height: 415px;
 			position: relative;
+			margin: 100px auto 0;
+			@include screen( small ) {
+				height: 625px;
+			}
+			@include screen( medium ) {
+				background: url('../images/global/bg-home.png') center top no-repeat;
+				max-width: 705px;
+				height: 599px;
+				margin: -50px auto 0;
+			}
 
 			.intro {
 				color: #012e6a;
 				margin: 0;
-				font-size: 14px;
+				font-size: 11px;
+				width: 100%;
 				max-width: 420px;
-				margin-left: -210px;
 				line-height: 1.3;
 				font-family: $font-uvnB;
-				@include ab( n, 50%, 105px, n );
+				padding: 0 20px;
+				@include ab( n, 0, 110px, n );
+				@include screen( small ) {
+					font-size: 14px;
+					margin-left: -210px;
+					left: 50%;
+					bottom: 180px;
+					padding: 0;
+				}
+				@include screen( medium ) {
+					font-size: 14px;
+					bottom: 105px;
+					margin-left: -205px;
+				}
 			}
 			.btn-play-now {
 				width: 145px;
@@ -29,6 +53,10 @@
 				font-family: $font-uvnB;
 				text-transform: uppercase;
 				@include ab( n, 50%, 30px, n );
+				&:hover, &.active {
+					background: url('../images/global/btn-play-now-active.png') no-repeat;
+					color: #ffe555;
+				}
 			}
 		}
 	}
