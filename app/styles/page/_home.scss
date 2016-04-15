@@ -8,6 +8,18 @@
 			height: 415px;
 			position: relative;
 			margin: 100px auto 0;
+			@include screen( galaxyS5 ) {
+				height: 450px;
+			}
+			@include screen( 375 ) {
+				height: 460px;
+			}
+			@include screen( ip6Plus ) {
+				height: 500px;
+			}
+			@include screen( 425 ) {
+				height: 515px;
+			}
 			@include screen( small ) {
 				height: 625px;
 			}
@@ -28,6 +40,18 @@
 				font-family: $font-uvnB;
 				padding: 0 20px;
 				@include ab( n, 0, 110px, n );
+				@include screen( galaxyS5 ) {
+					font-size: 12px;
+				}
+				@include screen( 375 ) {
+					padding: 0 30px;
+				}
+				@include screen( ip6Plus ) {
+					font-size: 13px;
+				}
+				@include screen( 425 ) {
+					font-size: 14px;
+				}
 				@include screen( small ) {
 					font-size: 14px;
 					margin-left: -210px;

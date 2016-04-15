@@ -133,6 +133,10 @@ $grid: 30px;
 
 // MEDIA QUERIES
 $breakpoints: (
+	375: 375px,
+	galaxyS5: 360px,
+	ip6Plus: 414px,
+	425: 425px,
 	small: 480px,
 	medium: 768px,
 	large: 1280px
@@ -146,5 +150,13 @@ $breakpoints: (
     }
     @else {
         @content;
+    }
+}
+
+@mixin clearfix {
+    &:after {
+        content: "";
+        display: table;
+        clear: both;
     }
 }

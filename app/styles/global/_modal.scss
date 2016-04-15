@@ -60,25 +60,34 @@
 			height: 100%;
 			overflow-y: auto;
 			padding: 0;
+			@include screen( medium ) {
+				overflow: hidden;
+				padding: 35px 0;
+			}
 		}
 		.heading {
 			background: url('../images/global/heading.png') no-repeat;
 			width: 229px;
 			height: 52px;
 			line-height: 52px;
-			top: -35px;
 			font-size: 18px;
 			text-transform: uppercase;
 			top: -35px;
 			left: 50%;
 			margin-left: -115px;
+			@include screen( medium ) {
+				top: -25px;
+			}
 		}
 		.intro {
 			padding: 25px 50px;
 		}
 		.ranking-content {
-			padding: 0 20px;
+			padding: 0 10px;
 			overflow: hidden;
+			@include screen( small ) {
+				padding: 0 20px;
+			}
 			&.type-header {
 				p {
 					line-height: normal;
@@ -104,7 +113,7 @@
 			&.type-list {
 				height: 250px;
 				overflow-y: auto;
-				@include screen ( large ) {
+				@include screen ( medium ) {
 					overflow: hidden;
 					height: 425px;
 				}
@@ -142,10 +151,11 @@
 							position: relative;
 							&.username {
 								text-align: left;
-								padding-left: 60px;
-								width: 75%;
+								padding-left: 50px;
+								width: 70%;
 								@include screen( small ) {
 									width: 40%;
+									padding-left: 60px;
 								}
 							}
 							&.phone-number {
@@ -163,7 +173,10 @@
 								line-height: 46px;
 								color: #fe3c33;
 								font-size: 20px;
-								@include ab( 6px, 3px, n, n );
+								@include ab( 6px, 0, n, n );
+								@include screen( small ) {
+									left: 3px;
+								}
 							}
 						}
 					}
@@ -177,7 +190,7 @@
 				padding: 0 10px;
 				text-align: center;
 				&.username {
-					width: 75%;
+					width: 70%;
 					@include screen( small ) {
 						width: 40%;
 					}
@@ -186,7 +199,10 @@
 					width: 35%;
 				}
 				&.total-potato {
-					width: 25%;
+					width: 30%;
+					@include screen( small ) {
+						width: 25%;
+					}
 				}
 			}
 		}
@@ -251,7 +267,7 @@
 
 				p {
 					line-height: normal;
-					font-size: 14px;
+					font-size: 12px;
 					font-family: $font-uvnB;
 					color: #fff;
 					text-transform: uppercase;
@@ -260,15 +276,27 @@
 					&:first-child {
 						border-left: 0;
 					}
+					@include screen( small ) {
+						font-size: 14px;
+					}
 				}
 			}
 			&.type-list {
 				background: url('../images/global/bg-list-history-mobile.png') center center no-repeat;
 				background-size: 100% 100%;
 				width: 100%;
-				max-width: 431px;
+				max-width: 300px;
 				height: 431px;
 				margin: 20px auto 0;
+				@include screen( 375 ) {
+					max-width: 350px;
+				}
+				@include screen( ip6Plus ) {
+					max-width: 375px;
+				}
+				@include screen( small ) {
+					max-width: 431px;
+				}
 				@include screen( medium ) {
 					background: url('../images/global/bg-list-history.png') center center no-repeat;
 					background-size: 100% 100%;
@@ -289,11 +317,14 @@
 					li {
 						p {
 							font-family: $font-uvnR;
-							font-size: 12px;
+							font-size: 9px;
 							color: #104176;
 							line-height: 45px;
 							border-right: 1px solid #818181;
 							border-bottom: 1px solid #818181;
+							@include screen( small ) {
+								font-size: 12px;
+							}
 						}
 					}
 				}
@@ -302,8 +333,14 @@
 				background: url('../images/global/bg-statistical.png') center center no-repeat;
 				background-size: 100% 100%;
 				width: 100%;
-				max-width: 431px;
+				max-width: 300px;
 				height: 96px;
+				margin: 6px auto 0;
+				padding: 10px;
+				@include screen( medium ) {
+					max-width: 431px;
+					padding: 15px 20px;
+				}
 				@include screen( medium ) {
 					background: url('../images/global/bg-statistical.png') center center no-repeat;
 					background-size: 100% 100%;
@@ -311,8 +348,6 @@
 					max-width: 451px;
 					height: 96px;
 				}
-				margin: 6px auto 0;
-				padding: 15px 20px;
 
 				.content-left {
 					font-family: $font-uvnR;
@@ -356,8 +391,11 @@
 				margin: 0;
 				display: block;
 				float: left;
-				padding: 0 10px;
+				padding: 0 5px;
 				text-align: center;
+				@include screen( small ) {
+					padding: 0 10px;
+				}
 				&.date {
 					width: 25%;
 				}
@@ -377,17 +415,19 @@
 			height: 100%;
 			overflow-y: auto;
 			.step {
-				margin: 15px auto 0;
+				margin: 10px auto 0;
 				padding: 15px 0;
 				&.step-1 {
 					background: url('../images/global/bg-content-bet-potato-top-mobile.png') center center no-repeat;
 					background-size: 100% 100%;
 					width: 100%;
-					max-width: 430px;
+					max-width: 300px;
 					height: 321px;
-					height: 252px;
-					margin: 0 auto;
-					@includen screen( medium ) {
+					@include screen( small ) {
+						max-width: 430px;
+						margin-top: 60px;
+					}
+					@include screen( medium ) {
 						background: url('../images/global/bg-content-bet-potato-top.png') center center no-repeat;
 						background-size: 100% 100%;
 						width: 100%;
@@ -401,8 +441,11 @@
 						text-align: center;
 						li {
 							display: inline-block;
-							padding: 0 20px;
+							padding: 0 10px;
 							position: relative;
+							@include screen( small ) {
+								padding: 0 20px;
+							}
 							&:first-child {
 								&:before {
 									display: none;
@@ -480,8 +523,11 @@
 					background: url('../images/global/bg-content-bet-potato-bottom-mobile.png') center center no-repeat;
 					background-size: 100% 100%;
 					width: 100%;
-					max-width: 430px;
+					max-width: 300px;
 					height: 252px;
+					@include screen( small ) {
+						max-width: 430px;
+					}
 					@include screen( medium ) {
 						background: url('../images/global/bg-content-bet-potato-bottom.png') center center no-repeat;
 						background-size: 100% 100%;
@@ -530,8 +576,11 @@
 				.title {
 					color: #0a3c73;
 					font-size: 14px;
-					padding-left: 80px;
+					padding-left: 10px;
 					margin: 0;
+					@include screen( small ) {
+						padding-left: 80px;
+					}
 
 					strong {
 						font-size: 24px;
@@ -567,9 +616,9 @@
 		}
 	}
 	.inner {
-		padding: 35px 0;
-		@include screen( small ) {
-			padding: 0;
+		padding: 0;
+		@include screen( medium ) {
+			padding: 35px 0;
 		}
 	}
 	.btn-close {

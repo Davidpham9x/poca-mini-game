@@ -1,8 +1,8 @@
 .page-schedule {
 	.main-content {
-		padding: 50px 0;
+		padding: 50px 0 0;
 
-		.heading {
+		/* .heading {
 			text-align: center;
 			font-size: 19px;
 			font-family: $font-uvnB;
@@ -24,53 +24,209 @@
 			&.type-final {
 				top: 490px;
 			}
+		} */
+		ul {
+			list-style: none;
+			padding: 0;
+			margin: 0;
+			text-align: center;
 		}
 		.list-teams {
 			list-style: none;
 			padding: 0;
-			max-width: 850px;
-			margin: 20px auto 0;
+			width: 100%;
+			max-width: 870px;
+			margin: 0 auto;
+			position: relative;
+			z-index: 2;
+			@include clearfix;
 			&:first-child {
 				margin: 0 auto;
 			}
 			&.type-quarterfinals {
+				margin-top: 40px;
+				&:before {
+					content: 'Vòng tứ kết';
+					text-align: center;
+					font-size: 10px;
+					font-family: $font-uvnB;
+					color: #ff0000;
+					text-align: center;
+					text-transform: uppercase;
+					position: absolute;
+					top: -40px;
+					left: 50%;
+					width: 200px;
+					margin-left: -100px;
+					line-height: normal;
+					@include screen( 375 ) {
+						font-size: 14px
+					}
+					@include screen( 425 ) {
+						font-size: 15px;
+					}
+					@include screen( medium ) {
+						font-size: 19px
+					}
+				}
 				li {
-					width: 12.5%;
-					padding: 0 1px;
+					/* width: 12.5%;
+					padding: 0 1px; */
 				}
 			}
 			&.type-semifinal {
+				overflow: hidden;
+				&:before {
+					content: 'Vòng';
+					text-align: center;
+					font-size: 10px;
+					font-family: $font-uvnB;
+					color: #ff0000;
+					text-align: center;
+					text-transform: uppercase;
+					position: absolute;
+					top: 15px;
+					left: 50%;
+					width: 200px;
+					margin-left: -100px;
+					line-height: normal;
+					@include screen( 375 ) {
+						font-size: 14px
+					}
+					@include screen( 425 ) {
+						font-size: 15px;
+					}
+					@include screen( medium ) {
+						font-size: 19px
+					}
+				}
+				&:after {
+					content: 'bán kết';
+					text-align: center;
+					font-size: 10px;
+					font-family: $font-uvnB;
+					color: #ff0000;
+					text-align: center;
+					text-transform: uppercase;
+					position: absolute;
+					top: 40px;
+					left: 50%;
+					width: 200px;
+					margin-left: -100px;
+					line-height: normal;
+					@include screen( 375 ) {
+						font-size: 14px
+					}
+					@include screen( 425 ) {
+						font-size: 15px;
+					}
+					@include screen( medium ) {
+						font-size: 19px
+					}
+				}
 				li {
-					width: 25%;
-					padding: 0 52px;
+					float: right;
+					width: 100%;
+					&:first-child {
+						float: left;
+					}
+					@include screen( medium ) {
+						width: 49%;
+					}
+
+					>ul {
+						>li {
+							width: 100%;
+
+							>ul {
+								>li {
+									width: 50%;
+									@include screen( medium ) {
+										width: 50%;
+									}
+								}
+							}
+						}
+					}
 				}
 			}
 			&.type-final {
-				li {
-					width: 50%;
-					padding: 0 52px;
+				overflow: hidden;
+				&:before {
+					content: 'Trận';
+					text-align: center;
+					font-size: 10px;
+					font-family: $font-uvnB;
+					color: #ff0000;
+					text-align: center;
+					text-transform: uppercase;
+					position: absolute;
+					top: 15px;
+					left: 50%;
+					width: 200px;
+					margin-left: -100px;
+					line-height: normal;
+					@include screen( 375 ) {
+						font-size: 14px
+					}
+					@include screen( 425 ) {
+						font-size: 15px;
+					}
+					@include screen( medium ) {
+						font-size: 19px
+					}
+				}
+				&:after {
+					content: 'chung kết';
+					text-align: center;
+					font-size: 10px;
+					font-family: $font-uvnB;
+					color: #ff0000;
+					text-align: center;
+					text-transform: uppercase;
+					position: absolute;
+					top: 40px;
+					left: 50%;
+					width: 200px;
+					margin-left: -100px;
+					line-height: normal;
+					@include screen( 375 ) {
+						font-size: 14px
+					}
+					@include screen( 425 ) {
+						font-size: 15px;
+					}
+					@include screen( medium ) {
+						font-size: 19px
+					}
+				}
+				>li {
+					float: right;
+					width: 49%;
+					&:first-child {
+						float: left;
+					}
+
+					>ul {
+						>li {
+							width: 49%;
+						}
+					}
 				}
 			}
 			&.type-winner {
 				li {
-					width: 100%;
+					/* width: 100%; */
 				}
 			}
-			/* &.type-disable {
-				li {
-					.outer {
-						.inner {
-							color: #ff0000;
-							font-size: 32px;
-							font-family: $font-uvnB;
-						}
-					}
-				}
-			} */
 
 			li {
-				float: left;
+				display: inline-block;
+				/* float: right; */
 				text-align: center;
+				&:first-child {
+					/* float: left; */
+				}
 				&.type-disable {
 					.outer {
 						.inner {
@@ -80,6 +236,9 @@
 						}
 					}
 				}
+				&.one-col {
+					width: 100%;
+				}
 
 				.outer {
 					background: url('../images/global/bg-team.png') no-repeat;
@@ -87,6 +246,7 @@
 					height: 86px;
 					display: table;
 					margin: 0 auto;
+
 					.inner {
 						display: table-cell;
 						vertical-align: middle;
@@ -103,11 +263,14 @@
 		.list-action {
 			list-style: none;
 			padding: 0;
+			width: 100%;
 			max-width: 840px;
 			margin: 0 auto;
+			padding-bottom: 20px;
+
 			&.type-quarterfinals {
 				li {
-					width: 25%;
+					width: 100%!important;
 
 					.highlight {
 						width: 118px;
@@ -117,7 +280,7 @@
 			}
 			&.type-semifinal {
 				li {
-					width: 50%;
+					width: 100%!important;
 
 					a {
 						&:before {
@@ -135,30 +298,45 @@
 			}
 			&.type-final {
 				li {
-					width: 100%;
+					width: 100%!important;
+					&:before {
+						top: 50px;
+					}
 
 					a {
 						&:before {
-							left: -165px;
+							left: -35px;
+							@include screen( small ) {
+								left: -75px;
+							}
+							@include screen( medium ) {
+								left: -165px;
+							}
 						}
 						&:after {
-							right: -165px;
+							right: -35px;
+							@include screen( small ) {
+								right: -75px;
+							}
+							@include screen( medium ) {
+								right: -165px;
+							}
 						}
 					}
 					.highlight {
-						width: 428px;
-						margin-left: -214px;
+						width: 170px;
+						margin-left: -85px;
+						@include screen( small ) {
+							width: 250px;
+							margin-left: -125px;
+						}
+						@include screen( medium ) {
+							width: 428px;
+							margin-left: -214px;
+						}
 					}
 				}
 			}
-			/* &.type-disable {
-				li {
-					a {
-						background: url('../images/global/btn-bet-disable.png') no-repeat;
-						color: #012e6a;
-					}
-				}
-			} */
 
 			li {
 				float: left;
@@ -168,6 +346,17 @@
 					a {
 						background: url('../images/global/btn-bet-disable.png') no-repeat;
 						color: #012e6a;
+					}
+				}
+				&:before {
+					content: '';
+					height: 25px;
+					width: 1px;
+					background-color: #416892;
+					@include ab( 60px, 50%, n , n );
+					display: none;
+					@include screen( medium ) {
+						display: block;
 					}
 				}
 
@@ -188,20 +377,20 @@
 					&:before {
 						content: '';
 						width: 1px;
-						height: 20px;
+						height: 25px;
 						background-color: #416892;
 						position: absolute;
 						left: -10px;
-						top: -5px;
+						top: -10px;
 					}
 					&:after {
 						content: '';
 						width: 1px;
-						height: 20px;
+						height: 25px;
 						background-color: #416892;
 						position: absolute;
 						right: -10px;
-						top: -5px;
+						top: -10px;
 					}
 				}
 				.highlight {
