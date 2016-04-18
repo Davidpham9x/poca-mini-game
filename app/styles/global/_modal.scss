@@ -425,7 +425,7 @@
 					height: 321px;
 					@include screen( small ) {
 						max-width: 430px;
-						margin-top: 60px;
+						margin-top: 30px;
 					}
 					@include screen( medium ) {
 						background: url('../images/global/bg-content-bet-potato-top.png') center center no-repeat;
