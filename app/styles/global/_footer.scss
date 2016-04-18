@@ -54,6 +54,13 @@ footer {
 						background: url('../images/global/btn-4-active.png') no-repeat;
 					}
 				}
+				&.btn-5 {
+					background: url('../images/global/btn-5.png') no-repeat;
+					width: 208px;
+					&:hover, &.active {
+						background: url('../images/global/btn-5-active.png') no-repeat;
+					}
+				}
 			}
 		}
 		.btn-quit-game {
